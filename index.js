@@ -31,6 +31,8 @@ bot.on("message", async message => {
 
     if (command === `${prefix}info`) {
 
+        message.delete();
+
         var botIcon = bot.user.displayAvatarURL;
 
         var botEmbed = new discord.RichEmbed()
@@ -46,6 +48,8 @@ bot.on("message", async message => {
     }
 
     if (command === `${prefix}serverinfo`) {
+
+        message.delete();
 
         var serverIcon = message.guild.iconURL;
 
@@ -232,6 +236,8 @@ bot.on("message", async message => {
 
     if (command === `${prefix}regels`) {
 
+        message.delete();
+
         if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Je hebt geen toestemming!").then(msg => msg.delete(2000));
 
         return message.channel.send("**Regels**: \n\n 1. **Praat/typ in de juiste kanalen** \n\n 2. **Heb respect voor een ander** \n (geaardheid, religie, levensovertuiging, politieke gezindheid, burgelijke staat, leeftijd, geslacht, ziekte(s), huidskleur, nationaliteit, afkomst, thuissituatie ect) \n\n 3. **Schelden is niet toegestaan** \n\n 4.**Racisme is niet toegestaan. Dit wordt om geen enkele omstandigheid getolereerd** \n\n 5. **Haat/dreigen is niet toegestaan. Dit wordt om geen enkele omstandigheid getolereerd** \n (Zorg ervoor dat je geen persoonlijk aanvallende berichten/media stuurt) \n\n 6. **Promotie op de server is niet toegestaan** \n\n 7 .**Gebruik #commands    voor commando's** \n\n 8. **Gebruik geen ongepaste gebruikersnamen** \n\n 9. **Het taggen van staffleden is niet toegestaan** \n\n Waarschuwingen + straf \n 3 = Kick \n 5 = ban \n\n ```De regels kunnen altijd veranderd worden```")
@@ -247,6 +253,8 @@ bot.on("message", async message => {
     }
 
     if (command === `${prefix}informatie`) {
+
+        message.delete();
 
         if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Je hebt geen toestemming!").then(msg => msg.delete(2000));
 
