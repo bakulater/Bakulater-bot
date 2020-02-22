@@ -262,12 +262,6 @@ bot.on("message", async message => {
 
     }
 
-    if(command === `${prefix}bla`){
-
-        return message.channel.send("blabla");
-
-    }
-
 });
 
 
