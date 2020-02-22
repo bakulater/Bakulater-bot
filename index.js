@@ -242,7 +242,7 @@ bot.on("message", async message => {
 
     if (command === `${prefix}help`) {
 
-        return message.channel.send(" ``` -info \n (Met deze command krijg je info over de bot.) \n\n -serverinfo \n (Met deze command krijg je info over de server.) \n\n -kick \n (Met deze command kun je leden kicken als je er de toestemming voor hebt) \n\n -ban \n (Met deze command kun je leden bannen als je er de toestemming voor hebt.) \n\n -clear \n (Met deze command kun je berichten verwijderen als je daar de toestemming voor hebt.) \n\n -mededeling \n (Met deze command kan staff een mededeling maken.) \n\n -rapporteer \n (Met deze command kan je gebruikers rapporteren voor schelden,dreigen etc. doe -rapporteer voor meer info.) \n\n -ping \n (met deze command kun je zien hoe hoog je ping is.)``` ");
+        return message.channel.send(" ``` -info \n (Met deze command krijg je info over de bot.) \n\n -serverinfo \n (Met deze command krijg je info over de server.) \n\n -kick \n (Met deze command kun je leden kicken als je er de toestemming voor hebt) \n\n -ban \n (Met deze command kun je leden bannen als je er de toestemming voor hebt.) \n\n -clear \n (Met deze command kun je berichten verwijderen als je daar de toestemming voor hebt.) \n\n -mededeling \n (Met deze command kan staff een mededeling maken.) \n\n -rapporteer \n (Met deze command kan je gebruikers rapporteren voor schelden,dreigen etc. doe -rapporteer voor meer info.) \n\n -ping \n (Met deze command kun je zien hoe hoog je ping is.)``` ");
 
     }
 
