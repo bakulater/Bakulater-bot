@@ -7,7 +7,7 @@ const bot = new discord.Client();
 
 bot.on("ready", async () => {
 
-    console.log(`${bot.user.username} is online!`)
+    console.log(`${bot.user.username} is single and ready to mingle!`)
 
     bot.user.setActivity("-help voor commands", { type: "PLAYING" });
 
