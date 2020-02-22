@@ -73,7 +73,7 @@ bot.on("message", async message => {
 
         var reason = arguments.join(" ").slice(22);
 
-        if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Sorry jij kan dit niet doen");
+        if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Je hebt geen toestemming!").then(msg => msg.delete(2000));
 
         if (kickUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Je kan deze gebruiker niet kicken");
 
@@ -107,7 +107,7 @@ bot.on("message", async message => {
 
         var reason = arguments.join(" ").slice(22);
 
-        if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Sorry jij kan dit niet doen");
+        if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Je hebt geen toestemming!").then(msg => msg.delete(2000));
 
         if (banUser.hasPermission("BAN_MEMBERS")) return message.channel.send("Je kan deze gebruiker niet bannen");
 
@@ -134,7 +134,7 @@ bot.on("message", async message => {
         //if people dont have permission manage messages then return: you do not have permission!
         //if you type the prefix and just randomly type a word it replies with "Geef een aantal op" Dutch for insert an amount
 
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(" Je hebt geen toestemming!");
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(" Je hebt geen toestemming!").then(msg => msg.delete(2000));
 
         if (!arguments[0]) return message.channel.send("Geef een aantal op.")
 
@@ -155,7 +155,7 @@ bot.on("message", async message => {
 
     if (command === `${prefix}mededeling`) {
 
-        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Je hebt geen toestemming!");
+        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Je hebt geen toestemming!").then(msg => msg.delete(2000));
 
         message.delete();
 
@@ -232,9 +232,7 @@ bot.on("message", async message => {
 
     if (command === `${prefix}regels`) {
 
-        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Je hebt geen toestemming!");
-
-        message.delete();
+        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Je hebt geen toestemming!").then(msg => msg.delete(2000));
 
         return message.channel.send("**Regels**: \n\n 1. **Praat/typ in de juiste kanalen** \n\n 2. **Heb respect voor een ander** \n (geaardheid, religie, levensovertuiging, politieke gezindheid, burgelijke staat, leeftijd, geslacht, ziekte(s), huidskleur, nationaliteit, afkomst, thuissituatie ect) \n\n 3. **Schelden is niet toegestaan** \n\n 4.**Racisme is niet toegestaan. Dit wordt om geen enkele omstandigheid getolereerd** \n\n 5. **Haat/dreigen is niet toegestaan. Dit wordt om geen enkele omstandigheid getolereerd** \n (Zorg ervoor dat je geen persoonlijk aanvallende berichten/media stuurt) \n\n 6. **Promotie op de server is niet toegestaan** \n\n 7 .**Gebruik #commands    voor commando's** \n\n 8. **Gebruik geen ongepaste gebruikersnamen** \n\n 9. **Het taggen van staffleden is niet toegestaan** \n\n Waarschuwingen + straf \n 3 = Kick \n 5 = ban \n\n ```De regels kunnen altijd veranderd worden```")
 
@@ -250,7 +248,7 @@ bot.on("message", async message => {
 
     if (command === `${prefix}informatie`) {
 
-        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Je hebt geen toestemming!");
+        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Je hebt geen toestemming!").then(msg => msg.delete(2000));
 
         return message.channel.send("《 @everyone 》\n Welkom op onze Gaming/Development Discord. \n Maak kennis met andere developers en maak vrienden!");
 
