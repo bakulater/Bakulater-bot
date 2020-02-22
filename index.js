@@ -254,11 +254,17 @@ bot.on("message", async message => {
 
     }
 
-    if(command === `${prefix}ping`){
+    if (command === `${prefix}ping`) {
 
         message.delete();
 
         message.channel.send("Pong: " + (message.createdTimestamp - Date.now()) + "ms");
+
+    }
+
+    if (command === `${prefix}avatar`){
+
+        return message.channel.send(message.author.iconURL);
 
     }
 
