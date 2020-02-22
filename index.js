@@ -258,7 +258,7 @@ bot.on("message", async message => {
 
         message.delete();
 
-        message.channel.send("Pong: " + (Date.now() - message.createdTimestamp) + "ms");
+        message.channel.send("Pong: " + (Date.now() - message.createdTimestamp) + "ms").then(msg => msg.delete(2000));
 
     }
 
